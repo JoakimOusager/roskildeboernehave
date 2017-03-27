@@ -36,7 +36,8 @@ public class Main extends Application {
         // Boxes
         HBox boxTop = new HBox();
         //bp.setAlignment(boxTop, Pos.TOP_CENTER);
-        box
+        boxTop.setSpacing(10);
+
 
         boxTop.setAlignment(Pos.TOP_CENTER);
 
