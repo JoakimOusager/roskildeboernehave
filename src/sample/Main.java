@@ -32,17 +32,15 @@ public class Main extends Application {
         // Boxes
         HBox boxTop = new HBox();
         //bp.setAlignment(boxTop, Pos.TOP_CENTER);
-        boxTop.setSpacing(10);
+        boxTop.setSpacing(15);
         boxTop.setAlignment(Pos.TOP_CENTER);
 
         HBox gpBox = new HBox();
         gpBox.setPadding(new Insets(10, 0, 0, 0));
-        gpBox.setSpacing(20);
+        gpBox.setSpacing(25);
         gpBox.setAlignment(Pos.TOP_CENTER);
 
-
         // ------- Implementing Nodes -------
-
         // Buttons
         Button ansatteOversigt = new Button("Ansatte");
         Button boernOversigt = new Button("Børn");
@@ -67,11 +65,7 @@ public class Main extends Application {
 
 
 
-
         // --------- Random shit ------------
-
-
-
         primaryStage.setTitle("Roskilde Børnehave");
         primaryStage.setScene(new Scene(bp, 500, 300));
         primaryStage.show();
