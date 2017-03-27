@@ -37,8 +37,6 @@ public class Main extends Application {
         HBox boxTop = new HBox();
         //bp.setAlignment(boxTop, Pos.TOP_CENTER);
         boxTop.setSpacing(10);
-
-
         boxTop.setAlignment(Pos.TOP_CENTER);
 
 
@@ -59,6 +57,11 @@ public class Main extends Application {
         Label tlf = new Label();
         Label adresse = new Label();
         Label email = new Label();
+
+
+
+
+        // --------- Random shit ------------
 
         boxTop.getChildren().addAll(ansatteOversigt, boernOversigt, vagtplanOversigt, logud);
         bp.setTop(boxTop);
