@@ -25,11 +25,7 @@ public class Main extends Application {
 
         // Panes
         BorderPane bp = new BorderPane();
-        bp.setPadding(new Insets(50, 50, 50, 50));
-
-
-
-
+        bp.setPadding(new Insets(20, 50, 50, 50));
 
         GridPane gp = new GridPane();
 
@@ -39,8 +35,10 @@ public class Main extends Application {
         boxTop.setSpacing(10);
         boxTop.setAlignment(Pos.TOP_CENTER);
 
-
         HBox gpBox = new HBox();
+        gpBox.setPadding(new Insets(10, 0, 0, 0));
+        gpBox.setSpacing(20);
+        gpBox.setAlignment(Pos.TOP_CENTER);
 
 
         // ------- Implementing Nodes -------
@@ -52,19 +50,27 @@ public class Main extends Application {
         Button logud = new Button("Log ud");
 
         // Labels
-        Label navn = new Label();
-        Label stilling = new Label();
-        Label tlf = new Label();
-        Label adresse = new Label();
-        Label email = new Label();
+        Label navn = new Label("Navn");
+        Label stilling = new Label("Stilling");
+        Label tlf = new Label("Tlf");
+        Label adresse = new Label("Adresse");
+        Label email = new Label("Email");
+
+        // -------- Adding nodes --------
+        // Adding buttons to Top BorderPane
+        boxTop.getChildren().addAll(ansatteOversigt, boernOversigt, vagtplanOversigt, logud);
+        bp.setTop(boxTop);
+
+        // Adding labels to Center BorderPane
+        gpBox.getChildren().addAll(navn, stilling, tlf, adresse, email);
+        bp.setCenter(gpBox);
 
 
 
 
         // --------- Random shit ------------
 
-        boxTop.getChildren().addAll(ansatteOversigt, boernOversigt, vagtplanOversigt, logud);
-        bp.setTop(boxTop);
+
 
         primaryStage.setTitle("Roskilde Børnehave");
         primaryStage.setScene(new Scene(bp, 500, 300));
