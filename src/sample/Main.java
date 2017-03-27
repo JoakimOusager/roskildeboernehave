@@ -21,6 +21,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    BorderPane bpApp = new BorderPane();
+    Scene sceneApp = new Scene(bpApp);
 
     public static void main(String[] args) {
         launch(args);
@@ -29,6 +31,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
         // -------- Login Screen -------
         // BorderPane
         BorderPane bpLogin = new BorderPane();
@@ -53,6 +56,9 @@ public class Main extends Application {
         PasswordField pf = new PasswordField();
         Button login = new Button("Login");
         login.setId("login");
+        login.setOnAction(e -> {
+            primaryStage.setScene(sceneApp);
+        });
         Label lblMessage = new Label();
 
         // Adding to GridPane
@@ -91,7 +97,7 @@ public class Main extends Application {
 
         // ------ App ------
         // Panes
-        BorderPane bpApp = new BorderPane();
+
         bpApp.setPadding(new Insets(20, 50, 50, 50));
 
         //GridPane gp = new GridPane();
@@ -130,7 +136,7 @@ public class Main extends Application {
         gpBox.getChildren().addAll(navn, stilling, tlf, adresse, email);
         bpApp.setCenter(gpBox);
 
-        Scene sceneApp = new Scene(bpApp);
+
 
         primaryStage.setTitle("Roskilde Børnehave");
         primaryStage.setScene(sceneLogin);
