@@ -35,7 +35,7 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
         int succes = 0;
@@ -94,7 +94,7 @@ public class Main extends Application {
         ds.setOffsetY(5);
 
         // Text and dropshadow
-        Text text = new Text("JavaFX Login Form");
+        Text text = new Text("ROSKIIIIIILLLDEEEEE");
         text.setFont(Font.font("Papyrus", FontWeight.BOLD, 28));
         text.setEffect(ds);
         text.setId("text");
