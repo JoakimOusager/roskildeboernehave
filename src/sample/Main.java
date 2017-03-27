@@ -24,6 +24,12 @@ public class Main extends Application {
     BorderPane bpApp = new BorderPane();
     Scene sceneApp = new Scene(bpApp);
 
+    String adminUser = "admin";
+    String adminPw = "admin";
+
+    String user = "user";
+    String pw = "user";
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -31,6 +37,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
+        int succes = 0;
 
         // -------- Login Screen -------
         // BorderPane
@@ -54,12 +62,18 @@ public class Main extends Application {
         TextField txtUserName = new TextField();
         Label lblPassword = new Label("Password: ");
         PasswordField pf = new PasswordField();
+        Label lblMessage = new Label();
         Button login = new Button("Login");
         login.setId("login");
         login.setOnAction(e -> {
-            primaryStage.setScene(sceneApp);
+            if (!pf.getText().equals(adminPw) && !txtUserName.getText().equals(adminUser)) {
+                lblMessage.setText("Your password is incorrect!");
+            } else {
+                lblMessage.setText("Your password has been confirmed.");
+                primaryStage.setScene(sceneApp);
+            }
         });
-        Label lblMessage = new Label();
+
 
         // Adding to GridPane
         gp.add(lblUsername, 0, 0);
