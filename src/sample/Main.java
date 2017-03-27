@@ -22,7 +22,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     BorderPane bpApp = new BorderPane();
-    Scene sceneApp = new Scene(bpApp);
+    Scene sceneApp = new Scene(bpApp, 500, 350);
 
     String adminUser = "admin";
     String adminPw = "admin";
